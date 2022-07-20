@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap");
+
+:root {
+  --primary: #060d17;
+  --secondary: #10161D;
+  --gray: #999C9F;
+  --white: #fff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: var(--gray);
+  background-color: var(--primary);
+  min-height: 100vh;
+}
+
+#root {
+  height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  color: var(--white);
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  color: #fbc500;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.primary-background{
+  background-color: var(--primary) !important;
+}
+
+/* Home */
+.hero {
+  background: url('../src/images/bg-tiles.webp');
+  background-size: cover;
+  min-height: 75vh;
+}
+
+.icon-row a {
+  width: 7%;
+  min-width: 39px;
+}
+
+.icon-row img {
+  opacity: 0.6;
+}
+
+.icon-row img:hover {
+  opacity: 1;
+}
+
+/* Add Page */
+.search-bar {
+  width: 600px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-bar .input-wrapper input {
+  width: 100%;
+  background-color: var(--secondary);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.search-results {
+  position: absolute;
+  width: 600px;
+  max-width: 600px;
+  background-color: var(--secondary);
+  z-index: 9999;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.search-results a {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .search-results {
+    width: 300px;
+    max-width: 300px;
+    background-color: var(--secondary);
+  }
+}
+
+.search-results li {
+  list-style: none;
+}
+
+.search-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-card .poster-wrapper img,
+.filler-poster {
+  background-color: #dbdada;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  color: transparent;
+}
+
+.search-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-card .info .title,
+.search-card .info .release-date {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+/* movie row */
+.movie-row {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.movie-row-listarea {
+  overflow-x: hidden;
+}
+
+.movie-row-list {
+    width: 99999999px;
+}
+
+.movie-card {
+  position: relative;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px 5px 0px 0;
+  cursor: pointer;
+}
+
+.movie-card img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.overlay-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.icon-bookmark:hover {
+  color:rgba(255, 255, 255, 0.9)
+}
+
+.movie-row-left,
+.movie-row-right {
+  position: absolute;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+.movie-row-left {
+  left: 0;
+}
+.movie-row-right {
+  right: 0;
+}
+.movie-row:hover .movie-row-left, 
+.movie-row:hover .movie-row-right{
+  opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .movie-row-left,
+  .movie-row-right {
+      opacity: 1;
+  }
+}
+
+.banner {
+  height: 50vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 100;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(to top, #0f0f0f, rgba(0, 0, 0, 0.1));
+}
+
+.movie-margin-top-200 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -200px;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
